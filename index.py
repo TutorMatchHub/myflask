@@ -24,7 +24,7 @@ def TeacherInfo():
     try:
         search_query=f'''select name,title,subject,major,research_area,type,bio,phone,email,address
                         from BasicInfo,ContactInfo
-                        where name={TeacherName} and id=teacher_id'''
+                        where name='{TeacherName}' and id=teacher_id'''
         cursor.execute(search_query)
         result=cursor.fetchone() # 假设符合要求的只有一条结果
         teacher_info={
@@ -39,8 +39,11 @@ def TeacherInfo():
             'email':result['address']
         }
         return teacher_info
-    except:
-        print("查询错误",pymysql.Error)
+    except Exception as e:
+        print("查询错误",e)
+    finally:
+        cursor.close()
+        connection.close()
 
 
 if __name__=='__main__':

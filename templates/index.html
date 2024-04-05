@@ -16,9 +16,9 @@
 			window.scrollTo(0, 1);
 		}
 	</script>
-	<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
-	<link href="css/style.css" rel='stylesheet' type='text/css' />
-	<link href="css/font-awesome.css" rel="stylesheet">
+	<link href="{{url_for('static',filename='css/bootstrap.css')}}" rel='stylesheet' type='text/css' />
+	<link href="{{url_for('static',filename='css/style.css')}}" rel='stylesheet' type='text/css' />
+	<link href="{{url_for('static',filename='css/font-awesome.css')}}" rel="stylesheet">
 	<link href="http://fonts.googleapis.com/css?family=Merriweather+Sans:300,300i,400,400i,700,700i,800" rel="stylesheet">
 	<link href="http://fonts.googleapis.com/css?family=Mallanna" rel="stylesheet">
 </head>
@@ -69,7 +69,7 @@
 								<li class="dropdown">
 									<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="Pages" role="button" aria-haspopup="true" aria-expanded="false">了解导师 <span class="fa fa-angle-down"></span></a>
 									<ul class="dropdown-menu">
-										<li><a href="services.html">学校</a></li>
+										<li><a href="service.html">学校</a></li>
 										<li><a href="join.html">学院</a></li>
 									</ul>
 								</li>
@@ -91,7 +91,7 @@
 						<div class="banner-top">
 							<div class="banner-info-w3ls-agileinfo">
 								<h3>人性最深层的需求就是渴望别人的欣赏。</h3>
-								<a href="a2.html">Login</a>
+								<a href="'a2.html">Login</a>
 								<a href="about.html">Read More <i class="fa fa-caret-right" aria-hidden="true"></i></a>
 								<a href="contact.html">Contact Us <i class="fa fa-caret-right" aria-hidden="true"></i></a>
 							</div>
@@ -149,7 +149,7 @@
 
 						<div class="login-m_page_img">
 
-							<img src="images/model.jpg" alt=" " class="img-responsive" />
+							<img src="{{url_for('static',filename='images/model.jpg')}}" alt=" " class="img-responsive" />
 
 						</div>
 						<div class="login-m_page">
@@ -191,7 +191,7 @@
 
 						<div class="login-m_page_img">
 
-							<img src="images/model.jpg" alt=" " class="img-responsive" />
+							<img src="{{url_for('static',filename='images/model.jpg')}}" alt=" " class="img-responsive" />
 
 						</div>
 						<div class="login-m_page">
@@ -245,7 +245,7 @@
 					</div>
 				</div>
 				<div class="col-md-4 about-gd1">
-					<img src="images/video.jpg" class="img-responsive" alt="">
+					<img src="{{url_for('static',filename='images/video.jpg')}}" class="img-responsive" alt="">
 				</div>
 				<div class="col-md-4 about-gd ab-right">
 					<div class="about-sub-gd">
@@ -277,7 +277,7 @@
 
 				</div>
 				<div class="col-md-6 edu_img">
-					<img src="images/stretch.jpg" alt=" " class="img-responsive">
+					<img src="{{url_for('static',filename='images/stretch.jpg')}}" alt=" " class="img-responsive">
 				</div>
 				<div class="clearfix"> </div>
 			</div>
@@ -387,19 +387,19 @@
 							<div class="item active">
 								<div class="row">
 									<div class="col-md-3 col-sm-3 col-xs-3 slidering">
-										<div class="thumbnail"><img src="images/g1.jpg" alt="Image" style="max-width:100%;"></div>
+										<div class="thumbnail"><img src="{{url_for('static',filename='images/g1.jpg')}}" alt="Image" style="max-width:100%;"></div>
 										<h5>Business &amp; Management</h5>
 									</div>
 									<div class="col-md-3 col-sm-3 col-xs-3 slidering">
-										<div class="thumbnail"><img src="images/g2.jpg" alt="Image" style="max-width:100%;"></div>
+										<div class="thumbnail"><img src="{{url_for('static',filename='images/g2.jpg')}}" alt="Image" style="max-width:100%;"></div>
 										<h5>Data Structures</h5>
 									</div>
 									<div class="col-md-3 col-sm-3 col-xs-3 slidering">
-										<div class="thumbnail"><img src="images/g3.jpg" alt="Image" style="max-width:100%;"></div>
+										<div class="thumbnail"><img src="{{url_for('static',filename='images/g3.jpg')}}" alt="Image" style="max-width:100%;"></div>
 										<h5>Digital Marketing</h5>
 									</div>
 									<div class="col-md-3 col-sm-3 col-xs-3 slidering">
-										<div class="thumbnail"><img src="images/g4.jpg" alt="Image" style="max-width:100%;"></div>
+										<div class="thumbnail"><img src="{{url_for('static',filename='images/g4.jpg')}}" alt="Image" style="max-width:100%;"></div>
 										<h5>Financial Analyst Course</h5>
 									</div>
 								</div>
@@ -407,19 +407,19 @@
 							<div class="item">
 								<div class="row">
 									<div class="col-md-3 col-sm-3 col-xs-3 slidering">
-										<div class="thumbnail"><img src="images/g5.jpg" alt="Image" style="max-width:100%;"></div>
+										<div class="thumbnail"><img src="{{url_for('static',filename='images/g5.jpg')}}" alt="Image" style="max-width:100%;"></div>
 										<h5>Arts &amp; Media </h5>
 									</div>
 									<div class="col-md-3 col-sm-3 col-xs-3 slidering">
-										<div class="thumbnail"><img src="images/g6.jpg" alt="Image" style="max-width:100%;"></div>
+										<div class="thumbnail"><img src="{{url_for('static',filename='images/g6.jpg')}}" alt="Image" style="max-width:100%;"></div>
 										<h5>Literature</h5>
 									</div>
 									<div class="col-md-3 col-sm-3 col-xs-3 slidering">
-										<div class="thumbnail"><img src="images/g7.jpg" alt="Image" style="max-width:100%;"></div>
+										<div class="thumbnail"><img src="{{url_for('static',filename='images/g7.jpg')}}" alt="Image" style="max-width:100%;"></div>
 										<h5>Study Skills</h5>
 									</div>
 									<div class="col-md-3 col-sm-3 col-xs-3 slidering">
-										<div class="thumbnail"><img src="images/g1.jpg" alt="Image" style="max-width:100%;"></div>
+										<div class="thumbnail"><img src="{{url_for('static',filename='images/g1.jpg')}}" alt="Image" style="max-width:100%;"></div>
 										<h5>Computer Science</h5>
 									</div>
 								</div>
@@ -427,23 +427,26 @@
 							<div class="item">
 								<div class="row">
 									<div class="col-md-3 col-sm-3 col-xs-3 slidering">
-										<div class="thumbnail"><img src="images/g1.jpg" alt="Image" style="max-width:100%;"></div>
+										<div class="thumbnail"><img src="{{url_for('static',filename='images/g1.jpg')}}" alt="Image" style="max-width:100%;"></div>
 										<h5>Business &amp; Management</h5>
 									</div>
 									<div class="col-md-3 col-sm-3 col-xs-3 slidering">
-										<div class="thumbnail"><img src="images/g2.jpg" alt="Image" style="max-width:100%;"></div>
+										<div class="thumbnail"><img src="{{url_for('static',filename='images/g2.jpg')}}" alt="Image" style="max-width:100%;"></div>
 										<h5>Data Structures</h5>
 									</div>
 									<div class="col-md-3 col-sm-3 col-xs-3 slidering">
-										<div class="thumbnail"><img src="images/g3.jpg" alt="Image" style="max-width:100%;"></div>
+										<div class="thumbnail"><img src="{{url_for('static',filename='images/g3.jpg')}}" alt="Image" style="max-width:100%;"></div>
 										<h5>Digital Marketing</h5>
 									</div>
 									<div class="col-md-3 col-sm-3 col-xs-3 slidering">
-										<div class="thumbnail"><img src="images/g4.jpg" alt="Image" style="max-width:100%;"></div>
+										<div class="thumbnail"><img src="{{url_for('static',filename='images/g4.jpg')}}" alt="Image" style="max-width:100%;"></div>
 										<h5>Financial Analyst Course</h5>
 									</div>
 								</div>
 							</div>
+
+
+							<!--以下为仍未更改资源地址的部分-->
 							<div class="item">
 								<div class="row">
 									<div class="col-md-3 col-sm-3 col-xs-3 slidering">
@@ -803,25 +806,24 @@
 </html>
 <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
 <script>
-	$('#search_btn').click(function(){
-		data=$('#SearchInput').val();
-		console.log(data);
-		if(data==''){
-			alert('不能为空！');
-			return false;
-		}
+	$(document).ready(function(){
+		$('#search_btn').click(function(){
+			data=$('#SearchInput').val();
+			console.log(data);
+			if(data==''){
+				alert('不能为空！');
+				return false;
+			}
 
-	var params={};
-	params.data=data;
-	var url='/GetTeacherInfo';
-	$.post(url,params,function(res){
-		console.log(res);
-	})
+			var params={
+				'SearchInput':data
+			};
 
-
-
-
-
+			var url='/GetTeacherInfo';
+			$.post(url,params,function(res){
+				console.log(res);
+			})
+		})
 	})
 
 </script>
