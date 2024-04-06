@@ -149,7 +149,7 @@
 
 						<div class="login-m_page_img">
 
-							<img src=".static/images/model.jpg" alt=" " class="img-responsive" />
+							<img src="{{url_for('static',filename='images/model.jpg')}}" alt=" " class="img-responsive" />
 
 						</div>
 						<div class="login-m_page">
@@ -450,19 +450,19 @@
 							<div class="item">
 								<div class="row">
 									<div class="col-md-3 col-sm-3 col-xs-3 slidering">
-										<div class="thumbnail"><img src="images/g5.jpg" alt="Image" style="max-width:100%;"></div>
+										<div class="thumbnail"><img src="{{url_for('static',filename='images/g5.jpg')}}" alt="Image" style="max-width:100%;"></div>
 										<h5>Arts &amp; Media </h5>
 									</div>
 									<div class="col-md-3 col-sm-3 col-xs-3 slidering">
-										<div class="thumbnail"><img src="images/g6.jpg" alt="Image" style="max-width:100%;"></div>
+										<div class="thumbnail"><img src="{{url_for('static',filename='images/g6.jpg')}}" alt="Image" style="max-width:100%;"></div>
 										<h5>Literature</h5>
 									</div>
 									<div class="col-md-3 col-sm-3 col-xs-3 slidering">
-										<div class="thumbnail"><img src="images/g7.jpg" alt="Image" style="max-width:100%;"></div>
+										<div class="thumbnail"><img src="{{url_for('static',filename='images/g7.jpg')}}" alt="Image" style="max-width:100%;"></div>
 										<h5>Study Skills</h5>
 									</div>
 									<div class="col-md-3 col-sm-3 col-xs-3 slidering">
-										<div class="thumbnail"><img src="images/g1.jpg" alt="Image" style="max-width:100%;"></div>
+										<div class="thumbnail"><img src="{{url_for('static',filename='images/g1.jpg')}}" alt="Image" style="max-width:100%;"></div>
 										<h5>Computer Science</h5>
 									</div>
 								</div>
@@ -522,7 +522,7 @@
 								<p class="sec">Consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
 									voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid
 									ex ea commodi consequatur.</p>
-								<img src="images/banner1.jpg" alt=" " class="img-responsive" />
+								<img src="{{url_for('static',filename='images/banner1.jpg')}}" alt=" " class="img-responsive" />
 
 							</div>
 							<div class="text-info">
@@ -532,7 +532,7 @@
 								<p class="sec">Consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
 									voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid
 									ex ea commodi consequatur.</p>
-								<img src="images/banner2.jpg" alt=" " class="img-responsive" />
+								<img src="{{url_for('static',filename='images/banner2.jpg')}}" alt=" " class="img-responsive" />
 
 							</div>
 
@@ -543,7 +543,7 @@
 								<p class="sec">Consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
 									voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid
 									ex ea commodi consequatur.</p>
-								<img src="images/banner3.jpg" alt=" " class="img-responsive" />
+								<img src="{{url_for('static',filename='images/banner3.jpg')}}" alt=" " class="img-responsive" />
 
 							</div>
 						</div>
@@ -635,7 +635,7 @@
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 				</div>
 				<div class="modal-body">
-					<img src="images/model.jpg" alt=" " class="img-responsive" />
+					<img src="{{url_for('static',filename='images/model.jpg')}}" alt=" " class="img-responsive" />
 					<p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi
 						consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur,
 						vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.</p>
@@ -721,8 +721,8 @@
 	<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
 	<!-- //js -->
 	<!--search-bar-->
-	<script src="js/main.js"></script>
-	<script src="js/responsiveslides.min.js"></script>
+	<script src="{{url_for('static',filename='js/main.js')}}"></script>
+	<script src="{{url_for('static',filename='js/responsiveslides.min.js')}}"></script>
 	<script>
 		$(function () {
 			$("#slider4").responsiveSlides({
@@ -741,8 +741,8 @@
 		});
 	</script>
 	<!--//search-bar-->
-	<link rel="stylesheet" type="text/css" href="css/easy-responsive-tabs.css " />
-	<script src="js/easyResponsiveTabs.js"></script>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/easy-responsive-tabs.css ')}}" />
+	<script src="{{url_for('static',filename='js/easyResponsiveTabs.js')}}"></script>
 	<!--Plug-in Initialisation-->
 	<script type="text/javascript">
 		$(document).ready(function () {
