@@ -26,10 +26,10 @@
 <body>
 	<!--Header-->
 	<div class="top-bar_sub_w3layouts_agile">
-		<h6>了解导师不用愁 <a href="contact.html">联系我们 </a></h6>
+		<h6>了解导师不用愁 <a href="contact.html" >联系我们 </a></h6>
 		<div class="search">
-			<!--<h6> <a href="a2.html">查询</a></h6>-->
-			<button id="search_btn">查询</button>
+			<h6> <a href="info" id="search_btn">查询</a></h6>
+			<!--<button id="search_btn">查询</button>-->
 			<!--使用 CSS 来设置输入框的宽度-->
 			<style>
 				input[type="text"] {
@@ -149,7 +149,7 @@
 
 						<div class="login-m_page_img">
 
-							<img src="{{url_for('static',filename='images/model.jpg')}}" alt=" " class="img-responsive" />
+							<img src=".static/images/model.jpg" alt=" " class="img-responsive" />
 
 						</div>
 						<div class="login-m_page">
@@ -807,6 +807,7 @@
 <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
 <script>
 	$(document).ready(function(){
+
 		$('#search_btn').click(function(){
 			data=$('#SearchInput').val();
 			console.log(data);
@@ -814,6 +815,8 @@
 				alert('不能为空！');
 				return false;
 			}
+		window.location.href = event.target.href;
+
 
 			var params={
 				'SearchInput':data

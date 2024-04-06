@@ -9,7 +9,9 @@ app=Flask(__name__)
 @app.route('/index')
 def index():
     return render_template('index.html')
-
+@app.route('/info')
+def info():
+    return render_template('a2.html')
 @app.route('/GetTeacherInfo',methods=['POST'])
 def TeacherInfo():
     TeacherName=request.form['SearchInput']
