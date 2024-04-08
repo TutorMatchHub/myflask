@@ -40,6 +40,7 @@ def TeacherInfo():
             'phone':result['phone'],
             'email':result['address']
         }
+
         return teacher_info
     except Exception as e:
         print("查询错误",e)
