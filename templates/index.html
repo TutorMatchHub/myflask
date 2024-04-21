@@ -803,29 +803,3 @@
 </body>
 
 </html>
-<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
-<script>
-	$(document).ready(function(){
-
-		$('#search_btn').click(function(){
-			data=$('#SearchInput').val();
-			console.log(data);
-			if(data==''){
-				alert('不能为空！');
-				return false;
-			}
-		window.location.href = event.target.href;
-
-
-			var params={
-				'SearchInput':data
-			};
-
-			var url='/GetTeacherInfo';
-			$.post(url,params,function(res){
-				console.log(res);
-			})
-		})
-	})
-
-</script>
