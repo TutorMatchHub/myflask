@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>teacherinfo</title>
+	<title>老师信息查询界面</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
 	<meta name="keywords" content="" />
@@ -29,8 +29,18 @@
 	<div class="top-bar_sub_w3layouts_agile">
 		<h6>了解导师不用愁 <a href="contact.html" >联系我们 </a></h6>
 		<div class="search">
-			<input type="text" id="keywordInput" placeholder="输入关键词">
-            <button id="search_btn">搜索</button>
+    <input type="text" id="keywordInput" placeholder="请输入">
+    <button style="background-color: #009688; color: white; width: 50px;
+        height: 38px;" id="search_btn">查询</button>
+</div>
+
+<style>
+    input[type="text"] {
+        width: 100px;
+        height: 38px;
+    }
+</style>
+
 			<!--<h6 id="search_btn">查询</h6>-->
 			<!--<button id="search_btn">查询</button>-->
 			<!--使用 CSS 来设置输入框的宽度-->
@@ -42,8 +52,6 @@
 			</style>
 			<input type="text" id="SearchInput" name="SearchInput">-->
 
-
-		</div>
 		<div class="clearfix"> </div>
 	</div>
 	<div class="header inner_banner" id="home">
@@ -54,13 +62,7 @@
 				<nav class="navbar navbar-default">
 					<!-- Brand and toggle get grouped for better mobile display -->
 					<div class="navbar-header">
-						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-									<span class="sr-only">Toggle navigation</span>
-									<span class="icon-bar"></span>
-									<span class="icon-bar"></span>
-									<span class="icon-bar"></span>
-								</button>
-						<h1><a class="navbar-brand" href="index.html">Stretch <span>Online Education</span></a></h1>
+						<h1><a class="navbar-brand" href="index.html">Trust <span>Tutor Search</span></a></h1>
 					</div>
 					<!-- Collect the nav links, forms, and other content for toggling -->
 
@@ -79,7 +81,6 @@
 
 			<ul class="short">
 				<li><a href="index.html">Home</a><span>|</span></li>
-				<li>Contact</li>
 			</ul>
 		</div>
 	</div>
@@ -127,43 +128,6 @@
 			</div>
 		</div>
 	</div>
-	<!-- //Modal1 -->
-	<!-- Modal2 -->
-	<div class="modal fade" id="myModal3" tabindex="-1" role="dialog">
-		<div class="modal-dialog">
-			<!-- Modal content-->
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal">&times;</button>
-
-					<div class="signin-form profile">
-
-						<div class="login-m_page_img">
-
-							<img src="images/model.jpg" alt=" " class="img-responsive" />
-
-						</div>
-						<div class="login-m_page">
-							<h3 class="sign">Sign Up</h3>
-							<div class="login-form-wthree-agile">
-								<form action="#" method="post">
-									<input type="text" name="name" placeholder="Username" required="">
-									<input type="email" name="email" placeholder="Email" required="">
-									<input type="password" name="password" placeholder="Password" required="">
-									<input type="password" name="password" placeholder="Confirm Password" required="">
-									<input type="submit" value="Sign Up">
-								</form>
-							</div>
-							<p><a href="#"> By clicking Sign up, I agree to your terms</a></p>
-						</div>
-						<div class="clearfix"></div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- //Modal2 -->
-
 	<!--//Header-->
 	<div class="banner_bottom">
 		<div class="container">
@@ -174,11 +138,7 @@
 			</div>
 			   <!-- 这里将显示教师信息 -->
 			<div id="teacherInfo">
-
             </div>
-
-
-
 			<div class="clearfix"> </div>
 
 		</div>
@@ -250,8 +210,7 @@
 			</div>
 		</div>
 		<div class="copy-w3-agileits">
-			<h2 class="footer-logo"><a href="index.html">Stretch <span>Online Education</span></a></h2>
-			<p>Copyright &copy; 2018.Company name All rights reserved.<a target="_blank" href="http://www.cssmoban.com/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></p>
+			<h2 class="footer-logo"><a href="index.html">Trust <span>Tutor Search</span></a></h2>
 			<div class="clearfix"></div>
 		</div>
 	</div>
