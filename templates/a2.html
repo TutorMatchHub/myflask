@@ -168,16 +168,15 @@
 	<div class="banner_bottom">
 		<div class="container">
 			<div class="tittle_head">
-				<h3 class="headerw3">Mail Us </h3>
-				<--下面开始主题部分-->
-			</div>
-			<div class="inner_sec_w3_agileinfo">
+				<h3 class="headerw3">
+				</h3>
 
-					<p>老师</p>
-					<div class="clearfix"> </div>
-				</div>
-				<div class="clearfix"> </div>
 			</div>
+			   <!-- 这里将显示教师信息 -->
+			<div id="teacherInfo">
+
+            </div>
+
 
 
 			<div class="clearfix"> </div>
@@ -319,8 +318,26 @@
 			var url='/GetTeacherInfo';
 			$.post(url,params,function(res){
 				console.log(res);
+				console.log(res.bio);
+				// 获取用于显示教师信息的 div 元素
+                var teacherInfoDiv = document.getElementById('teacherInfo');
+
+                // 创建用于显示教师信息的 HTML 内容
+                var htmlContent = `
+                    <h2>教师信息</h2>
+                    <p><strong>姓名：</strong>${res.name}</p>
+                    <p><strong>邮箱：</strong>${res.email}</p>
+                    <p><strong>专业：</strong>${res.major}</p>
+                    <p><strong>简介：</strong>${res.bio}</p>
+                    <p><strong>电话：</strong>${res.phone}</p>
+                    <!-- 其他属性... -->
+                `;
+
+                // 将 HTML 内容插入到 div 元素中
+                teacherInfoDiv.innerHTML = htmlContent;
 			})
 		})
 	})
+
 
 </script>
