@@ -14,7 +14,7 @@ def info():
     return render_template('a2.html')
 @app.route('/GetTeacherInfo',methods=['POST'])
 def TeacherInfo():
-    TeacherName=request.form['SearchInput']
+    TeacherName=request.form['keywordInput']
     connection=pymysql.connect(
         host='localhost',
         user='root',
