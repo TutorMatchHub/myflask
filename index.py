@@ -24,7 +24,7 @@ def TeacherInfo():
     )
     cursor=connection.cursor()
     try:
-        search_query=f'''select name,title,subject,major,research_area,type,bio,phone,email,address
+        search_query=f'''select name,title,subject,major,research_area,type,bio,email,phone,address
                         from BasicInfo,ContactInfo
                         where name='{TeacherName}' and id=teacher_id'''
         cursor.execute(search_query)
@@ -38,7 +38,8 @@ def TeacherInfo():
             'type':result['type'],
             'bio':result['bio'],
             'phone':result['phone'],
-            'email':result['address']
+            'email':result['email'],
+            'address':result['address']
         }
 
         return teacher_info

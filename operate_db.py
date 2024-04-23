@@ -75,7 +75,7 @@ def getTeacherInfo(filepath,filename):
             if key=="姓名" or key=="职称" or key=="学科" or key=="专业" or key=="研究方向" or key=="导师类型" or key=="个人简介":
                 if key=="个人简介":
                     value1=value
-                    for pattern in [r'<.*?>.*?</.*?>',r'<.*?>']:
+                    for pattern in [r'</.*?>',r'<.*?>']:
                         value=re.sub(pattern,'',value1)
                         value1=value
 
@@ -191,7 +191,7 @@ def InsertRecord():
 
         teacher_id=cursor.lastrowid#获得刚刚插入的basic的id
 
-        contact_attrs = "teacher_id,phone,email,address"  # contact属性
+        contact_attrs = "teacher_id,email,phone,address"  # contact属性
         tmp_value = tuple(dict_contact.values())  # contact值
         contact_value=(teacher_id,)+tmp_value
         cursor.execute(query.Insert("ContactInfo",contact_attrs,contact_value))#插入contact表
@@ -210,7 +210,7 @@ def InsertRecord():
 
         teacher_id = cursor.lastrowid  # 获得刚刚插入的basic的id
 
-        contact_attrs = "teacher_id,phone,email,address"  # contact属性
+        contact_attrs = "teacher_id,email,phone,address"  # contact属性
         tmp_value = tuple(dict_contact.values())  # contact值
         contact_value = (teacher_id,) + tmp_value
         cursor.execute(query.Insert("ContactInfo", contact_attrs, contact_value))  # 插入contact表
@@ -228,7 +228,7 @@ def InsertRecord():
 
         teacher_id = cursor.lastrowid  # 获得刚刚插入的basic的id
 
-        contact_attrs = "teacher_id,phone,email,address"  # contact属性
+        contact_attrs = "teacher_id,email,phone,address"  # contact属性
         tmp_value = tuple(dict_contact.values())  # contact值
         contact_value = (teacher_id,) + tmp_value
         cursor.execute(query.Insert("ContactInfo", contact_attrs, contact_value))  # 插入contact表
@@ -333,9 +333,9 @@ def ShowAllRecord(table_name):
 
 
 if __name__=="__main__":
-    #InsertRecord()
+    InsertRecord()
     #Insert_CNKIrecord()
 
-    ShowAllRecord("BasicInfo")
-    ShowAllRecord("ContactInfo")
+    #ShowAllRecord("BasicInfo")
+    #ShowAllRecord("ContactInfo")
 
