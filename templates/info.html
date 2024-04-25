@@ -10,6 +10,9 @@
 .header-text {
     background-color: #009688; /* 设置背景颜色为深绿色 */
     color: #FFFFFF; /* 设置字体颜色为白色 */
+    padding: 10px 20px; /* 设置内边距 */
+    font-size: 20px; /* 设置字体大小 */
+    border-radius: 5px; /* 设置圆角边框 */
     font-family: '微软雅黑'; /* 使用引号包裹字体族名称 */
     display: inline-block; /* 将元素视为内联块元素 */
 }
@@ -137,14 +140,14 @@
 		</div>
 	</div>
 	<!--//Header-->
-	<div class="tutor">
+	<div class="tutor" style=" margin-bottom: 20px">
 		<img src="tutor.jpg" alt="Tutor picture">
 	</div>
 	<div class="index">
 		<div class="basic_info">
 			<div class="w12">
                     <div class="jump-top ititle">
-                        <h3 class="header-text">基本信息</h3>
+                        <h3 class="header-text" style=" margin-bottom: 20px">基本信息</h3>
                     </div>
                     <div id="info_detail">
                     </div>
@@ -153,7 +156,7 @@
 		<div class="search_area">
 			<div class="w12">
                     <div class="jump-top ititle">
-                        <h3 class="header-text">研究领域</h3>
+                        <h3 class="header-text" style=" margin-bottom: 20px">研究领域</h3>
                     </div>
                     <div id="search_detail">
                     </div>
@@ -162,7 +165,7 @@
 		<div class="bio">
 			<div class="w12">
                     <div class="jump-top ititle">
-                        <h3 class="header-text">个人简介</h3>
+                        <h3 class="header-text" style=" margin-bottom: 20px">个人简介</h3>
                     </div>
                     <div id="bio_detail">
                     </div>
@@ -172,7 +175,7 @@
 		<div class="relationship">
 			<div class="w12">
                     <div class="jump-top ititle">
-                        <h3 class="header-text">关系图谱</h3>
+                        <h3 class="header-text" style=" margin-bottom: 20px">关系图谱</h3>
                     </div>
                     <div id="rela_detail">
                     </div>
@@ -321,7 +324,7 @@
                 var htmlContent = `
                    <ul>
                       <li><strong>姓名：</strong>${res.name}</li>
-                      <li>任职学校：同济大学</li>
+                      <li><strong>任职学校：</strong>同济大学</li>
                       <li><strong>职称：</strong>${res.title}</li>
                       <li><strong>导师类型：</strong>${res.type}</li>
                       <li><strong>邮箱：</strong>${res.email}</li>
@@ -349,7 +352,9 @@
                 var teacherBioDiv = document.getElementById('bio_detail');
                 // 创建用于显示教师信息的 HTML 内容
                 var htmlContent = `
-                   <p><strong>简介：</strong>${res.bio}</p>
+                <ul>
+                      <li><strong>简介：</strong>${res.bio}</li>
+                </ul>
                 `;
                 // 将 HTML 内容插入到 div 元素中
                 teacherBioDiv.innerHTML = htmlContent;
