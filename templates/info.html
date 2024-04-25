@@ -6,7 +6,15 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
 	<meta name="keywords" content="" />
+    <style>
+.header-text {
+    background-color: #009688; /* 设置背景颜色为深绿色 */
+    color: #FFFFFF; /* 设置字体颜色为白色 */
+    font-family: '微软雅黑'; /* 使用引号包裹字体族名称 */
+    display: inline-block; /* 将元素视为内联块元素 */
+}
 
+    </style>
 	<script type="application/x-javascript">
 		addEventListener("load", function () {
 			setTimeout(hideURLbar, 0);
@@ -129,18 +137,46 @@
 		</div>
 	</div>
 	<!--//Header-->
-	<div class="banner_bottom">
-		<div class="container">
-			<div class="tittle_head">
-				<h3 class="headerw3">
-				</h3>
-
+	<div class="tutor">
+		<img src="tutor.jpg" alt="Tutor picture">
+	</div>
+	<div class="index">
+		<div class="basic_info">
+			<div class="w12">
+                    <div class="jump-top ititle">
+                        <h3 class="header-text">基本信息</h3>
+                    </div>
+                    <div id="info_detail">
+                    </div>
 			</div>
-			   <!-- 这里将显示教师信息 -->
-			<div id="teacherInfo">
-            </div>
-			<div class="clearfix"> </div>
+		</div>
+		<div class="search_area">
+			<div class="w12">
+                    <div class="jump-top ititle">
+                        <h3 class="header-text">研究领域</h3>
+                    </div>
+                    <div id="search_detail">
+                    </div>
+			</div>
+		</div>
+		<div class="bio">
+			<div class="w12">
+                    <div class="jump-top ititle">
+                        <h3 class="header-text">个人简介</h3>
+                    </div>
+                    <div id="bio_detail">
+                    </div>
+			</div>
+		</div>
 
+		<div class="relationship">
+			<div class="w12">
+                    <div class="jump-top ititle">
+                        <h3 class="header-text">关系图谱</h3>
+                    </div>
+                    <div id="rela_detail">
+                    </div>
+			</div>
 		</div>
 	</div>
 	</div>
@@ -279,27 +315,44 @@
 				console.log(res);
 				console.log(res.bio);
 				// 获取用于显示教师信息的 div 元素
-                var teacherInfoDiv = document.getElementById('teacherInfo');
+                var teacherInfoDiv = document.getElementById('info_detail');
 
                 // 创建用于显示教师信息的 HTML 内容
                 var htmlContent = `
-                    <h2>教师信息</h2>
-                    <p><strong>姓名：</strong>${res.name}</p>
-                    <h2>任职学校：同济大学</h2>
-                    <p><strong>职称：</strong>${res.title}</p>
-                    <p><strong>导师类型：</strong>${res.type}</p>
-                    <p><strong>邮箱：</strong>${res.email}</p>
-                    <p><strong>专业：</strong>${res.major}</p>
-                    <p><strong>电话：</strong>${res.phone}</p>
-                    <p><strong>地址：</strong>${res.address}</p>
-                    <p><strong>科目：</strong>${res.subject}</p>
-                    <p><strong>研究领域：</strong>${res.research_area}</p>
-                    <p><strong>简介：</strong>${res.bio}</p>
-                    <!-- 其他属性... -->
+                   <ul>
+                      <li><strong>姓名：</strong>${res.name}</li>
+                      <li>任职学校：同济大学</li>
+                      <li><strong>职称：</strong>${res.title}</li>
+                      <li><strong>导师类型：</strong>${res.type}</li>
+                      <li><strong>邮箱：</strong>${res.email}</li>
+                      <li><strong>专业：</strong>${res.major}</li>
+                      <li><strong>电话：</strong>${res.phone}</li>
+                      <li><strong>地址：</strong>${res.address}</li>
+                   </ul>
                 `;
-
                 // 将 HTML 内容插入到 div 元素中
                 teacherInfoDiv.innerHTML = htmlContent;
+
+                // 获取用于显示教师研究领域的 div 元素
+                var teacherSearchDiv = document.getElementById('search_detail');
+                // 创建用于显示教师信息的 HTML 内容
+                var htmlContent = `
+                   <ul>
+                      <li><strong>科目：</strong>${res.subject}</li>
+                      <li><strong>研究领域：</strong>${res.research_area}</li>
+                   </ul>
+                `;
+                // 将 HTML 内容插入到 div 元素中
+                teacherSearchDiv.innerHTML = htmlContent;
+
+                // 获取用于显示教师个人简介的 div 元素
+                var teacherBioDiv = document.getElementById('bio_detail');
+                // 创建用于显示教师信息的 HTML 内容
+                var htmlContent = `
+                   <p><strong>简介：</strong>${res.bio}</p>
+                `;
+                // 将 HTML 内容插入到 div 元素中
+                teacherBioDiv.innerHTML = htmlContent;
 			})
 		})
 	})
